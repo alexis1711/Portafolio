@@ -1,0 +1,1431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ComandosSalvamentoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ComandosSalvamento.dbo.AccidentesDeTransito' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AccidentesDeTransito">
+          <Key>
+            <PropertyRef Name="CodigoAccidente" />
+          </Key>
+          <Property Name="CodigoAccidente" Type="int" Nullable="false" />
+          <Property Name="Lugar" Type="text" />
+          <Property Name="Observaciones" Type="text" />
+        </EntityType>
+        <EntityType Name="CategoriaIncidentes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tipo" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ComandosSalvamento.dbo.Cirugias' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cirugias">
+          <Key>
+            <PropertyRef Name="CodigoCirugia" />
+          </Key>
+          <Property Name="CodigoCirugia" Type="int" Nullable="false" />
+          <Property Name="Procedimiento" Type="text" />
+        </EntityType>
+        <EntityType Name="Correlativo">
+          <Key>
+            <PropertyRef Name="Correlativo" />
+          </Key>
+          <Property Name="Correlativo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Fecha" Type="smalldatetime" Nullable="false" />
+          <Property Name="Tipo" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ComandosSalvamento.dbo.Emergencias' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Emergencias">
+          <Key>
+            <PropertyRef Name="CodEmergencia" />
+            <PropertyRef Name="CodIncidente" />
+            <PropertyRef Name="TipoLlamada" />
+          </Key>
+          <Property Name="CodEmergencia" Type="int" Nullable="false" />
+          <Property Name="CodIncidente" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="TipoLlamada" Type="int" Nullable="false" />
+          <Property Name="Observaciones" Type="text" />
+          <Property Name="LugarIncidente" Type="text" />
+        </EntityType>
+        <EntityType Name="Empleados">
+          <Key>
+            <PropertyRef Name="CodigoEmpleado" />
+          </Key>
+          <Property Name="CodigoEmpleado" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="PrimerNombreEmpleado" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SegundoNombreEmpleado" Type="varchar" MaxLength="50" />
+          <Property Name="PrimerApellidoEmpleado" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SegundoApellidoEmpleado" Type="varchar" MaxLength="50" />
+          <Property Name="Genero" Type="int" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+          <Property Name="TipoEmpleado" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmpleadosXCorrelativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodCorrelativo" Type="int" Nullable="false" />
+          <Property Name="CodEmpleado" Type="varchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Generos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Genero" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HospitalesSS">
+          <Key>
+            <PropertyRef Name="CodigoHospital" />
+          </Key>
+          <Property Name="CodigoHospital" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="NombreHospital" Type="text" Nullable="false" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Incidentes">
+          <Key>
+            <PropertyRef Name="CodigoIncidente" />
+          </Key>
+          <Property Name="CodigoIncidente" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="TipoIncidente" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pacientes">
+          <Key>
+            <PropertyRef Name="CodigoPaciente" />
+          </Key>
+          <Property Name="CodigoPaciente" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="PrimerNombrePaciente" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SegundoNombrePaciente" Type="varchar" MaxLength="50" />
+          <Property Name="PrimerApellidoPaciente" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SegundoApellidoPaciente" Type="varchar" MaxLength="50" />
+          <Property Name="Direccion" Type="text" />
+          <Property Name="Genero" Type="int" Nullable="false" />
+          <Property Name="Edad" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ComandosSalvamento.dbo.PacientesXCorrelativo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PacientesXCorrelativo">
+          <Key>
+            <PropertyRef Name="CodCorrelativo" />
+            <PropertyRef Name="CodPaciente" />
+          </Key>
+          <Property Name="CodCorrelativo" Type="int" Nullable="false" />
+          <Property Name="CodPaciente" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="FrecuenciaCardiaca" Type="int" />
+          <Property Name="FrecuenciaRespiratoria" Type="int" />
+          <Property Name="PresionArterial" Type="int" />
+          <Property Name="Temperatura" Type="float" />
+          <Property Name="SaturacionOxigeno" Type="float" />
+          <Property Name="CodHospital" Type="varchar" MaxLength="5" />
+          <Property Name="Telefono" Type="varchar" MaxLength="9" />
+          <Property Name="NombreAcompañante" Type="varchar" MaxLength="200" />
+          <Property Name="Parentesco" Type="varchar" MaxLength="50" />
+          <Property Name="Diagnostico" Type="text" />
+          <Property Name="HoraLlegada" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="TipoCorrelativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tipo" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoEmpleado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tipo" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoLlamada">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoLlamada" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Unidades">
+          <Key>
+            <PropertyRef Name="CodigoUnidad" />
+          </Key>
+          <Property Name="CodigoUnidad" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Placas" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="Descripcion" Type="text" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UnidadesXCorrelativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodCorrelativo" Type="int" Nullable="false" />
+          <Property Name="CodUnidad" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vehiculos">
+          <Key>
+            <PropertyRef Name="NumeroPlaca" />
+          </Key>
+          <Property Name="NumeroPlaca" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="Descripcion" Type="text" />
+        </EntityType>
+        <EntityType Name="VehiculosXCorrelativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodCorrelativo" Type="int" Nullable="false" />
+          <Property Name="NumPlaca" Type="char" MaxLength="8" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Accidente__Codig__693CA210">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="AccidentesDeTransito" Type="Self.AccidentesDeTransito" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo" />
+            </Principal>
+            <Dependent Role="AccidentesDeTransito">
+              <PropertyRef Name="CodigoAccidente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cirugias__Codigo__787EE5A0">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="Cirugias" Type="Self.Cirugias" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo" />
+            </Principal>
+            <Dependent Role="Cirugias">
+              <PropertyRef Name="CodigoCirugia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Correlativ__Tipo__5BE2A6F2">
+          <End Role="TipoCorrelativo" Type="Self.TipoCorrelativo" Multiplicity="1" />
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCorrelativo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Correlativo">
+              <PropertyRef Name="Tipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Emergenci__CodEm__7C4F7684">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="Emergencias" Type="Self.Emergencias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo" />
+            </Principal>
+            <Dependent Role="Emergencias">
+              <PropertyRef Name="CodEmergencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Emergenci__CodIn__7D439ABD">
+          <End Role="Incidentes" Type="Self.Incidentes" Multiplicity="1" />
+          <End Role="Emergencias" Type="Self.Emergencias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Incidentes">
+              <PropertyRef Name="CodigoIncidente" />
+            </Principal>
+            <Dependent Role="Emergencias">
+              <PropertyRef Name="CodIncidente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Emergenci__TipoL__7E37BEF6">
+          <End Role="TipoLlamada" Type="Self.TipoLlamada" Multiplicity="1" />
+          <End Role="Emergencias" Type="Self.Emergencias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoLlamada">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Emergencias">
+              <PropertyRef Name="TipoLlamada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__CodCo__6C190EBB">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="EmpleadosXCorrelativo" Type="Self.EmpleadosXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo" />
+            </Principal>
+            <Dependent Role="EmpleadosXCorrelativo">
+              <PropertyRef Name="CodCorrelativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__CodEm__6D0D32F4">
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
+          <End Role="EmpleadosXCorrelativo" Type="Self.EmpleadosXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleados">
+              <PropertyRef Name="CodigoEmpleado" />
+            </Principal>
+            <Dependent Role="EmpleadosXCorrelativo">
+              <PropertyRef Name="CodEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__Estad__5629CD9C">
+          <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="Estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__Gener__5535A963">
+          <End Role="Generos" Type="Self.Generos" Multiplicity="1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Generos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="Genero" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__TipoE__571DF1D5">
+          <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoEmpleado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="TipoEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Hospitale__Estad__4F7CD00D">
+          <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+          <End Role="HospitalesSS" Type="Self.HospitalesSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HospitalesSS">
+              <PropertyRef Name="Estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Incidente__TipoI__6754599E">
+          <End Role="CategoriaIncidentes" Type="Self.CategoriaIncidentes" Multiplicity="1" />
+          <End Role="Incidentes" Type="Self.Incidentes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriaIncidentes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Incidentes">
+              <PropertyRef Name="TipoIncidente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pacientes__CodCo__6EF57B66">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="PacientesXCorrelativo" Type="Self.PacientesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo" />
+            </Principal>
+            <Dependent Role="PacientesXCorrelativo">
+              <PropertyRef Name="CodCorrelativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pacientes__CodHo__70DDC3D8">
+          <End Role="HospitalesSS" Type="Self.HospitalesSS" Multiplicity="0..1" />
+          <End Role="PacientesXCorrelativo" Type="Self.PacientesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HospitalesSS">
+              <PropertyRef Name="CodigoHospital" />
+            </Principal>
+            <Dependent Role="PacientesXCorrelativo">
+              <PropertyRef Name="CodHospital" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pacientes__CodPa__6FE99F9F">
+          <End Role="Pacientes" Type="Self.Pacientes" Multiplicity="1" />
+          <End Role="PacientesXCorrelativo" Type="Self.PacientesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pacientes">
+              <PropertyRef Name="CodigoPaciente" />
+            </Principal>
+            <Dependent Role="PacientesXCorrelativo">
+              <PropertyRef Name="CodPaciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pacientes__Gener__52593CB8">
+          <End Role="Generos" Type="Self.Generos" Multiplicity="1" />
+          <End Role="Pacientes" Type="Self.Pacientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Generos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pacientes">
+              <PropertyRef Name="Genero" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Unidades__Estado__5EBF139D">
+          <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+          <End Role="Unidades" Type="Self.Unidades" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Unidades">
+              <PropertyRef Name="Estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UnidadesX__CodCo__619B8048">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="UnidadesXCorrelativo" Type="Self.UnidadesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo" />
+            </Principal>
+            <Dependent Role="UnidadesXCorrelativo">
+              <PropertyRef Name="CodCorrelativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UnidadesX__CodUn__628FA481">
+          <End Role="Unidades" Type="Self.Unidades" Multiplicity="1" />
+          <End Role="UnidadesXCorrelativo" Type="Self.UnidadesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unidades">
+              <PropertyRef Name="CodigoUnidad" />
+            </Principal>
+            <Dependent Role="UnidadesXCorrelativo">
+              <PropertyRef Name="CodUnidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__CodCo__75A278F5">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="VehiculosXCorrelativo" Type="Self.VehiculosXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo" />
+            </Principal>
+            <Dependent Role="VehiculosXCorrelativo">
+              <PropertyRef Name="CodCorrelativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__NumPl__76969D2E">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="1" />
+          <End Role="VehiculosXCorrelativo" Type="Self.VehiculosXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="NumeroPlaca" />
+            </Principal>
+            <Dependent Role="VehiculosXCorrelativo">
+              <PropertyRef Name="NumPlaca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ComandosSalvamentoModelStoreContainer">
+          <EntitySet Name="CategoriaIncidentes" EntityType="Self.CategoriaIncidentes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Correlativo" EntityType="Self.Correlativo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empleados" EntityType="Self.Empleados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmpleadosXCorrelativo" EntityType="Self.EmpleadosXCorrelativo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Generos" EntityType="Self.Generos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HospitalesSS" EntityType="Self.HospitalesSS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Incidentes" EntityType="Self.Incidentes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pacientes" EntityType="Self.Pacientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoCorrelativo" EntityType="Self.TipoCorrelativo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoLlamada" EntityType="Self.TipoLlamada" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Unidades" EntityType="Self.Unidades" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UnidadesXCorrelativo" EntityType="Self.UnidadesXCorrelativo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vehiculos" EntityType="Self.Vehiculos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VehiculosXCorrelativo" EntityType="Self.VehiculosXCorrelativo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccidentesDeTransito" EntityType="Self.AccidentesDeTransito" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AccidentesDeTransito].[CodigoAccidente] AS [CodigoAccidente], 
+    [AccidentesDeTransito].[Lugar] AS [Lugar], 
+    [AccidentesDeTransito].[Observaciones] AS [Observaciones]
+    FROM [dbo].[AccidentesDeTransito] AS [AccidentesDeTransito]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Cirugias" EntityType="Self.Cirugias" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cirugias].[CodigoCirugia] AS [CodigoCirugia], 
+    [Cirugias].[Procedimiento] AS [Procedimiento]
+    FROM [dbo].[Cirugias] AS [Cirugias]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Emergencias" EntityType="Self.Emergencias" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Emergencias].[CodEmergencia] AS [CodEmergencia], 
+    [Emergencias].[CodIncidente] AS [CodIncidente], 
+    [Emergencias].[TipoLlamada] AS [TipoLlamada], 
+    [Emergencias].[Observaciones] AS [Observaciones], 
+    [Emergencias].[LugarIncidente] AS [LugarIncidente]
+    FROM [dbo].[Emergencias] AS [Emergencias]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PacientesXCorrelativo" EntityType="Self.PacientesXCorrelativo" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PacientesXCorrelativo].[CodCorrelativo] AS [CodCorrelativo], 
+    [PacientesXCorrelativo].[CodPaciente] AS [CodPaciente], 
+    [PacientesXCorrelativo].[FrecuenciaCardiaca] AS [FrecuenciaCardiaca], 
+    [PacientesXCorrelativo].[FrecuenciaRespiratoria] AS [FrecuenciaRespiratoria], 
+    [PacientesXCorrelativo].[PresionArterial] AS [PresionArterial], 
+    [PacientesXCorrelativo].[Temperatura] AS [Temperatura], 
+    [PacientesXCorrelativo].[SaturacionOxigeno] AS [SaturacionOxigeno], 
+    [PacientesXCorrelativo].[CodHospital] AS [CodHospital], 
+    [PacientesXCorrelativo].[Telefono] AS [Telefono], 
+    [PacientesXCorrelativo].[NombreAcompañante] AS [NombreAcompañante], 
+    [PacientesXCorrelativo].[Parentesco] AS [Parentesco], 
+    [PacientesXCorrelativo].[Diagnostico] AS [Diagnostico], 
+    [PacientesXCorrelativo].[HoraLlegada] AS [HoraLlegada]
+    FROM [dbo].[PacientesXCorrelativo] AS [PacientesXCorrelativo]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Accidente__Codig__693CA210" Association="Self.FK__Accidente__Codig__693CA210">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="AccidentesDeTransito" EntitySet="AccidentesDeTransito" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cirugias__Codigo__787EE5A0" Association="Self.FK__Cirugias__Codigo__787EE5A0">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="Cirugias" EntitySet="Cirugias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Correlativ__Tipo__5BE2A6F2" Association="Self.FK__Correlativ__Tipo__5BE2A6F2">
+            <End Role="TipoCorrelativo" EntitySet="TipoCorrelativo" />
+            <End Role="Correlativo" EntitySet="Correlativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Emergenci__CodEm__7C4F7684" Association="Self.FK__Emergenci__CodEm__7C4F7684">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="Emergencias" EntitySet="Emergencias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Emergenci__CodIn__7D439ABD" Association="Self.FK__Emergenci__CodIn__7D439ABD">
+            <End Role="Incidentes" EntitySet="Incidentes" />
+            <End Role="Emergencias" EntitySet="Emergencias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Emergenci__TipoL__7E37BEF6" Association="Self.FK__Emergenci__TipoL__7E37BEF6">
+            <End Role="TipoLlamada" EntitySet="TipoLlamada" />
+            <End Role="Emergencias" EntitySet="Emergencias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__CodCo__6C190EBB" Association="Self.FK__Empleados__CodCo__6C190EBB">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="EmpleadosXCorrelativo" EntitySet="EmpleadosXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__CodEm__6D0D32F4" Association="Self.FK__Empleados__CodEm__6D0D32F4">
+            <End Role="Empleados" EntitySet="Empleados" />
+            <End Role="EmpleadosXCorrelativo" EntitySet="EmpleadosXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__Estad__5629CD9C" Association="Self.FK__Empleados__Estad__5629CD9C">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__Gener__5535A963" Association="Self.FK__Empleados__Gener__5535A963">
+            <End Role="Generos" EntitySet="Generos" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__TipoE__571DF1D5" Association="Self.FK__Empleados__TipoE__571DF1D5">
+            <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Hospitale__Estad__4F7CD00D" Association="Self.FK__Hospitale__Estad__4F7CD00D">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="HospitalesSS" EntitySet="HospitalesSS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Incidente__TipoI__6754599E" Association="Self.FK__Incidente__TipoI__6754599E">
+            <End Role="CategoriaIncidentes" EntitySet="CategoriaIncidentes" />
+            <End Role="Incidentes" EntitySet="Incidentes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pacientes__CodCo__6EF57B66" Association="Self.FK__Pacientes__CodCo__6EF57B66">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="PacientesXCorrelativo" EntitySet="PacientesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pacientes__CodHo__70DDC3D8" Association="Self.FK__Pacientes__CodHo__70DDC3D8">
+            <End Role="HospitalesSS" EntitySet="HospitalesSS" />
+            <End Role="PacientesXCorrelativo" EntitySet="PacientesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pacientes__CodPa__6FE99F9F" Association="Self.FK__Pacientes__CodPa__6FE99F9F">
+            <End Role="Pacientes" EntitySet="Pacientes" />
+            <End Role="PacientesXCorrelativo" EntitySet="PacientesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pacientes__Gener__52593CB8" Association="Self.FK__Pacientes__Gener__52593CB8">
+            <End Role="Generos" EntitySet="Generos" />
+            <End Role="Pacientes" EntitySet="Pacientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Unidades__Estado__5EBF139D" Association="Self.FK__Unidades__Estado__5EBF139D">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Unidades" EntitySet="Unidades" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UnidadesX__CodCo__619B8048" Association="Self.FK__UnidadesX__CodCo__619B8048">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="UnidadesXCorrelativo" EntitySet="UnidadesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UnidadesX__CodUn__628FA481" Association="Self.FK__UnidadesX__CodUn__628FA481">
+            <End Role="Unidades" EntitySet="Unidades" />
+            <End Role="UnidadesXCorrelativo" EntitySet="UnidadesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__CodCo__75A278F5" Association="Self.FK__Vehiculos__CodCo__75A278F5">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="VehiculosXCorrelativo" EntitySet="VehiculosXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__NumPl__76969D2E" Association="Self.FK__Vehiculos__NumPl__76969D2E">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="VehiculosXCorrelativo" EntitySet="VehiculosXCorrelativo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ComandosSalvamentoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CategoriaIncidentes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Incidentes" Relationship="Self.FK__Incidente__TipoI__6754599E" FromRole="CategoriaIncidentes" ToRole="Incidentes" />
+        </EntityType>
+        <EntityType Name="Correlativo">
+          <Key>
+            <PropertyRef Name="Correlativo1" />
+          </Key>
+          <Property Name="Correlativo1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Tipo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AccidentesDeTransito" Relationship="Self.FK__Accidente__Codig__693CA210" FromRole="Correlativo" ToRole="AccidentesDeTransito" />
+          <NavigationProperty Name="Cirugias" Relationship="Self.FK__Cirugias__Codigo__787EE5A0" FromRole="Correlativo" ToRole="Cirugias" />
+          <NavigationProperty Name="TipoCorrelativo" Relationship="Self.FK__Correlativ__Tipo__5BE2A6F2" FromRole="Correlativo" ToRole="TipoCorrelativo" />
+          <NavigationProperty Name="Emergencias" Relationship="Self.FK__Emergenci__CodEm__7C4F7684" FromRole="Correlativo" ToRole="Emergencias" />
+          <NavigationProperty Name="EmpleadosXCorrelativo" Relationship="Self.FK__Empleados__CodCo__6C190EBB" FromRole="Correlativo" ToRole="EmpleadosXCorrelativo" />
+          <NavigationProperty Name="PacientesXCorrelativo" Relationship="Self.FK__Pacientes__CodCo__6EF57B66" FromRole="Correlativo" ToRole="PacientesXCorrelativo" />
+          <NavigationProperty Name="UnidadesXCorrelativo" Relationship="Self.FK__UnidadesX__CodCo__619B8048" FromRole="Correlativo" ToRole="UnidadesXCorrelativo" />
+          <NavigationProperty Name="VehiculosXCorrelativo" Relationship="Self.FK__Vehiculos__CodCo__75A278F5" FromRole="Correlativo" ToRole="VehiculosXCorrelativo" />
+        </EntityType>
+        <EntityType Name="Empleados">
+          <Key>
+            <PropertyRef Name="CodigoEmpleado" />
+          </Key>
+          <Property Name="CodigoEmpleado" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrimerNombreEmpleado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SegundoNombreEmpleado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PrimerApellidoEmpleado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SegundoApellidoEmpleado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Genero" Type="Int32" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TipoEmpleado" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmpleadosXCorrelativo" Relationship="Self.FK__Empleados__CodEm__6D0D32F4" FromRole="Empleados" ToRole="EmpleadosXCorrelativo" />
+          <NavigationProperty Name="Estado1" Relationship="Self.FK__Empleados__Estad__5629CD9C" FromRole="Empleados" ToRole="Estado" />
+          <NavigationProperty Name="Generos" Relationship="Self.FK__Empleados__Gener__5535A963" FromRole="Empleados" ToRole="Generos" />
+          <NavigationProperty Name="TipoEmpleado1" Relationship="Self.FK__Empleados__TipoE__571DF1D5" FromRole="Empleados" ToRole="TipoEmpleado" />
+        </EntityType>
+        <EntityType Name="EmpleadosXCorrelativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodCorrelativo" Type="Int32" Nullable="false" />
+          <Property Name="CodEmpleado" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Correlativo" Relationship="Self.FK__Empleados__CodCo__6C190EBB" FromRole="EmpleadosXCorrelativo" ToRole="Correlativo" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__CodEm__6D0D32F4" FromRole="EmpleadosXCorrelativo" ToRole="Empleados" />
+        </EntityType>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__Estad__5629CD9C" FromRole="Estado" ToRole="Empleados" />
+          <NavigationProperty Name="HospitalesSS" Relationship="Self.FK__Hospitale__Estad__4F7CD00D" FromRole="Estado" ToRole="HospitalesSS" />
+          <NavigationProperty Name="Unidades" Relationship="Self.FK__Unidades__Estado__5EBF139D" FromRole="Estado" ToRole="Unidades" />
+        </EntityType>
+        <EntityType Name="Generos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Genero" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__Gener__5535A963" FromRole="Generos" ToRole="Empleados" />
+          <NavigationProperty Name="Pacientes" Relationship="Self.FK__Pacientes__Gener__52593CB8" FromRole="Generos" ToRole="Pacientes" />
+        </EntityType>
+        <EntityType Name="HospitalesSS">
+          <Key>
+            <PropertyRef Name="CodigoHospital" />
+          </Key>
+          <Property Name="CodigoHospital" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreHospital" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Estado1" Relationship="Self.FK__Hospitale__Estad__4F7CD00D" FromRole="HospitalesSS" ToRole="Estado" />
+          <NavigationProperty Name="PacientesXCorrelativo" Relationship="Self.FK__Pacientes__CodHo__70DDC3D8" FromRole="HospitalesSS" ToRole="PacientesXCorrelativo" />
+        </EntityType>
+        <EntityType Name="Incidentes">
+          <Key>
+            <PropertyRef Name="CodigoIncidente" />
+          </Key>
+          <Property Name="CodigoIncidente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TipoIncidente" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CategoriaIncidentes" Relationship="Self.FK__Incidente__TipoI__6754599E" FromRole="Incidentes" ToRole="CategoriaIncidentes" />
+          <NavigationProperty Name="Emergencias" Relationship="Self.FK__Emergenci__CodIn__7D439ABD" FromRole="Incidentes" ToRole="Emergencias" />
+        </EntityType>
+        <EntityType Name="Pacientes">
+          <Key>
+            <PropertyRef Name="CodigoPaciente" />
+          </Key>
+          <Property Name="CodigoPaciente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrimerNombrePaciente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SegundoNombrePaciente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PrimerApellidoPaciente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SegundoApellidoPaciente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Genero" Type="Int32" Nullable="false" />
+          <Property Name="Edad" Type="Int32" />
+          <NavigationProperty Name="Generos" Relationship="Self.FK__Pacientes__Gener__52593CB8" FromRole="Pacientes" ToRole="Generos" />
+          <NavigationProperty Name="PacientesXCorrelativo" Relationship="Self.FK__Pacientes__CodPa__6FE99F9F" FromRole="Pacientes" ToRole="PacientesXCorrelativo" />
+        </EntityType>
+        <EntityType Name="TipoCorrelativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Correlativo" Relationship="Self.FK__Correlativ__Tipo__5BE2A6F2" FromRole="TipoCorrelativo" ToRole="Correlativo" />
+        </EntityType>
+        <EntityType Name="TipoEmpleado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__TipoE__571DF1D5" FromRole="TipoEmpleado" ToRole="Empleados" />
+        </EntityType>
+        <EntityType Name="TipoLlamada">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoLlamada1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Emergencias" Relationship="Self.FK__Emergenci__TipoL__7E37BEF6" FromRole="TipoLlamada" ToRole="Emergencias" />
+        </EntityType>
+        <EntityType Name="Unidades">
+          <Key>
+            <PropertyRef Name="CodigoUnidad" />
+          </Key>
+          <Property Name="CodigoUnidad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Placas" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Estado1" Relationship="Self.FK__Unidades__Estado__5EBF139D" FromRole="Unidades" ToRole="Estado" />
+          <NavigationProperty Name="UnidadesXCorrelativo" Relationship="Self.FK__UnidadesX__CodUn__628FA481" FromRole="Unidades" ToRole="UnidadesXCorrelativo" />
+        </EntityType>
+        <EntityType Name="UnidadesXCorrelativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodCorrelativo" Type="Int32" Nullable="false" />
+          <Property Name="CodUnidad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Correlativo" Relationship="Self.FK__UnidadesX__CodCo__619B8048" FromRole="UnidadesXCorrelativo" ToRole="Correlativo" />
+          <NavigationProperty Name="Unidades" Relationship="Self.FK__UnidadesX__CodUn__628FA481" FromRole="UnidadesXCorrelativo" ToRole="Unidades" />
+        </EntityType>
+        <EntityType Name="Vehiculos">
+          <Key>
+            <PropertyRef Name="NumeroPlaca" />
+          </Key>
+          <Property Name="NumeroPlaca" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="VehiculosXCorrelativo" Relationship="Self.FK__Vehiculos__NumPl__76969D2E" FromRole="Vehiculos" ToRole="VehiculosXCorrelativo" />
+        </EntityType>
+        <EntityType Name="VehiculosXCorrelativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodCorrelativo" Type="Int32" Nullable="false" />
+          <Property Name="NumPlaca" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Correlativo" Relationship="Self.FK__Vehiculos__CodCo__75A278F5" FromRole="VehiculosXCorrelativo" ToRole="Correlativo" />
+          <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Vehiculos__NumPl__76969D2E" FromRole="VehiculosXCorrelativo" ToRole="Vehiculos" />
+        </EntityType>
+        <EntityType Name="AccidentesDeTransito">
+          <Key>
+            <PropertyRef Name="CodigoAccidente" />
+          </Key>
+          <Property Name="CodigoAccidente" Type="Int32" Nullable="false" />
+          <Property Name="Lugar" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Correlativo" Relationship="Self.FK__Accidente__Codig__693CA210" FromRole="AccidentesDeTransito" ToRole="Correlativo" />
+        </EntityType>
+        <EntityType Name="Cirugias">
+          <Key>
+            <PropertyRef Name="CodigoCirugia" />
+          </Key>
+          <Property Name="CodigoCirugia" Type="Int32" Nullable="false" />
+          <Property Name="Procedimiento" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Correlativo" Relationship="Self.FK__Cirugias__Codigo__787EE5A0" FromRole="Cirugias" ToRole="Correlativo" />
+        </EntityType>
+        <EntityType Name="Emergencias">
+          <Key>
+            <PropertyRef Name="CodEmergencia" />
+            <PropertyRef Name="CodIncidente" />
+            <PropertyRef Name="TipoLlamada" />
+          </Key>
+          <Property Name="CodEmergencia" Type="Int32" Nullable="false" />
+          <Property Name="CodIncidente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TipoLlamada" Type="Int32" Nullable="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LugarIncidente" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Correlativo" Relationship="Self.FK__Emergenci__CodEm__7C4F7684" FromRole="Emergencias" ToRole="Correlativo" />
+          <NavigationProperty Name="Incidentes" Relationship="Self.FK__Emergenci__CodIn__7D439ABD" FromRole="Emergencias" ToRole="Incidentes" />
+          <NavigationProperty Name="TipoLlamada1" Relationship="Self.FK__Emergenci__TipoL__7E37BEF6" FromRole="Emergencias" ToRole="TipoLlamada" />
+        </EntityType>
+        <EntityType Name="PacientesXCorrelativo">
+          <Key>
+            <PropertyRef Name="CodCorrelativo" />
+            <PropertyRef Name="CodPaciente" />
+          </Key>
+          <Property Name="CodCorrelativo" Type="Int32" Nullable="false" />
+          <Property Name="CodPaciente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FrecuenciaCardiaca" Type="Int32" />
+          <Property Name="FrecuenciaRespiratoria" Type="Int32" />
+          <Property Name="PresionArterial" Type="Int32" />
+          <Property Name="Temperatura" Type="Double" />
+          <Property Name="SaturacionOxigeno" Type="Double" />
+          <Property Name="CodHospital" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="NombreAcompañante" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Parentesco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Diagnostico" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HoraLlegada" Type="Time" Precision="7" />
+          <NavigationProperty Name="Correlativo" Relationship="Self.FK__Pacientes__CodCo__6EF57B66" FromRole="PacientesXCorrelativo" ToRole="Correlativo" />
+          <NavigationProperty Name="HospitalesSS" Relationship="Self.FK__Pacientes__CodHo__70DDC3D8" FromRole="PacientesXCorrelativo" ToRole="HospitalesSS" />
+          <NavigationProperty Name="Pacientes" Relationship="Self.FK__Pacientes__CodPa__6FE99F9F" FromRole="PacientesXCorrelativo" ToRole="Pacientes" />
+        </EntityType>
+        <Association Name="FK__Incidente__TipoI__6754599E">
+          <End Role="CategoriaIncidentes" Type="Self.CategoriaIncidentes" Multiplicity="1" />
+          <End Role="Incidentes" Type="Self.Incidentes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriaIncidentes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Incidentes">
+              <PropertyRef Name="TipoIncidente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Accidente__Codig__693CA210">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="AccidentesDeTransito" Type="Self.AccidentesDeTransito" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo1" />
+            </Principal>
+            <Dependent Role="AccidentesDeTransito">
+              <PropertyRef Name="CodigoAccidente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cirugias__Codigo__787EE5A0">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="Cirugias" Type="Self.Cirugias" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo1" />
+            </Principal>
+            <Dependent Role="Cirugias">
+              <PropertyRef Name="CodigoCirugia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Correlativ__Tipo__5BE2A6F2">
+          <End Role="TipoCorrelativo" Type="Self.TipoCorrelativo" Multiplicity="1" />
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCorrelativo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Correlativo">
+              <PropertyRef Name="Tipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Emergenci__CodEm__7C4F7684">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="Emergencias" Type="Self.Emergencias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo1" />
+            </Principal>
+            <Dependent Role="Emergencias">
+              <PropertyRef Name="CodEmergencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__CodCo__6C190EBB">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="EmpleadosXCorrelativo" Type="Self.EmpleadosXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo1" />
+            </Principal>
+            <Dependent Role="EmpleadosXCorrelativo">
+              <PropertyRef Name="CodCorrelativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pacientes__CodCo__6EF57B66">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="PacientesXCorrelativo" Type="Self.PacientesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo1" />
+            </Principal>
+            <Dependent Role="PacientesXCorrelativo">
+              <PropertyRef Name="CodCorrelativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UnidadesX__CodCo__619B8048">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="UnidadesXCorrelativo" Type="Self.UnidadesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo1" />
+            </Principal>
+            <Dependent Role="UnidadesXCorrelativo">
+              <PropertyRef Name="CodCorrelativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__CodCo__75A278F5">
+          <End Role="Correlativo" Type="Self.Correlativo" Multiplicity="1" />
+          <End Role="VehiculosXCorrelativo" Type="Self.VehiculosXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Correlativo">
+              <PropertyRef Name="Correlativo1" />
+            </Principal>
+            <Dependent Role="VehiculosXCorrelativo">
+              <PropertyRef Name="CodCorrelativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__CodEm__6D0D32F4">
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="1" />
+          <End Role="EmpleadosXCorrelativo" Type="Self.EmpleadosXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleados">
+              <PropertyRef Name="CodigoEmpleado" />
+            </Principal>
+            <Dependent Role="EmpleadosXCorrelativo">
+              <PropertyRef Name="CodEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__Estad__5629CD9C">
+          <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="Estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__Gener__5535A963">
+          <End Role="Generos" Type="Self.Generos" Multiplicity="1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Generos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="Genero" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__TipoE__571DF1D5">
+          <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoEmpleado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="TipoEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Hospitale__Estad__4F7CD00D">
+          <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+          <End Role="HospitalesSS" Type="Self.HospitalesSS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HospitalesSS">
+              <PropertyRef Name="Estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Unidades__Estado__5EBF139D">
+          <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+          <End Role="Unidades" Type="Self.Unidades" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Unidades">
+              <PropertyRef Name="Estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pacientes__Gener__52593CB8">
+          <End Role="Generos" Type="Self.Generos" Multiplicity="1" />
+          <End Role="Pacientes" Type="Self.Pacientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Generos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pacientes">
+              <PropertyRef Name="Genero" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pacientes__CodHo__70DDC3D8">
+          <End Role="HospitalesSS" Type="Self.HospitalesSS" Multiplicity="0..1" />
+          <End Role="PacientesXCorrelativo" Type="Self.PacientesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HospitalesSS">
+              <PropertyRef Name="CodigoHospital" />
+            </Principal>
+            <Dependent Role="PacientesXCorrelativo">
+              <PropertyRef Name="CodHospital" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Emergenci__CodIn__7D439ABD">
+          <End Role="Incidentes" Type="Self.Incidentes" Multiplicity="1" />
+          <End Role="Emergencias" Type="Self.Emergencias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Incidentes">
+              <PropertyRef Name="CodigoIncidente" />
+            </Principal>
+            <Dependent Role="Emergencias">
+              <PropertyRef Name="CodIncidente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pacientes__CodPa__6FE99F9F">
+          <End Role="Pacientes" Type="Self.Pacientes" Multiplicity="1" />
+          <End Role="PacientesXCorrelativo" Type="Self.PacientesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pacientes">
+              <PropertyRef Name="CodigoPaciente" />
+            </Principal>
+            <Dependent Role="PacientesXCorrelativo">
+              <PropertyRef Name="CodPaciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Emergenci__TipoL__7E37BEF6">
+          <End Role="TipoLlamada" Type="Self.TipoLlamada" Multiplicity="1" />
+          <End Role="Emergencias" Type="Self.Emergencias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoLlamada">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Emergencias">
+              <PropertyRef Name="TipoLlamada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UnidadesX__CodUn__628FA481">
+          <End Role="Unidades" Type="Self.Unidades" Multiplicity="1" />
+          <End Role="UnidadesXCorrelativo" Type="Self.UnidadesXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unidades">
+              <PropertyRef Name="CodigoUnidad" />
+            </Principal>
+            <Dependent Role="UnidadesXCorrelativo">
+              <PropertyRef Name="CodUnidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__NumPl__76969D2E">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="1" />
+          <End Role="VehiculosXCorrelativo" Type="Self.VehiculosXCorrelativo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="NumeroPlaca" />
+            </Principal>
+            <Dependent Role="VehiculosXCorrelativo">
+              <PropertyRef Name="NumPlaca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ComandosSalvamentoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CategoriaIncidentes" EntityType="Self.CategoriaIncidentes" />
+          <EntitySet Name="Correlativo" EntityType="Self.Correlativo" />
+          <EntitySet Name="Empleados" EntityType="Self.Empleados" />
+          <EntitySet Name="EmpleadosXCorrelativo" EntityType="Self.EmpleadosXCorrelativo" />
+          <EntitySet Name="Estado" EntityType="Self.Estado" />
+          <EntitySet Name="Generos" EntityType="Self.Generos" />
+          <EntitySet Name="HospitalesSS" EntityType="Self.HospitalesSS" />
+          <EntitySet Name="Incidentes" EntityType="Self.Incidentes" />
+          <EntitySet Name="Pacientes" EntityType="Self.Pacientes" />
+          <EntitySet Name="TipoCorrelativo" EntityType="Self.TipoCorrelativo" />
+          <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" />
+          <EntitySet Name="TipoLlamada" EntityType="Self.TipoLlamada" />
+          <EntitySet Name="Unidades" EntityType="Self.Unidades" />
+          <EntitySet Name="UnidadesXCorrelativo" EntityType="Self.UnidadesXCorrelativo" />
+          <EntitySet Name="Vehiculos" EntityType="Self.Vehiculos" />
+          <EntitySet Name="VehiculosXCorrelativo" EntityType="Self.VehiculosXCorrelativo" />
+          <EntitySet Name="AccidentesDeTransito" EntityType="Self.AccidentesDeTransito" />
+          <EntitySet Name="Cirugias" EntityType="Self.Cirugias" />
+          <EntitySet Name="Emergencias" EntityType="Self.Emergencias" />
+          <EntitySet Name="PacientesXCorrelativo" EntityType="Self.PacientesXCorrelativo" />
+          <AssociationSet Name="FK__Incidente__TipoI__6754599E" Association="Self.FK__Incidente__TipoI__6754599E">
+            <End Role="CategoriaIncidentes" EntitySet="CategoriaIncidentes" />
+            <End Role="Incidentes" EntitySet="Incidentes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Accidente__Codig__693CA210" Association="Self.FK__Accidente__Codig__693CA210">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="AccidentesDeTransito" EntitySet="AccidentesDeTransito" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cirugias__Codigo__787EE5A0" Association="Self.FK__Cirugias__Codigo__787EE5A0">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="Cirugias" EntitySet="Cirugias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Correlativ__Tipo__5BE2A6F2" Association="Self.FK__Correlativ__Tipo__5BE2A6F2">
+            <End Role="TipoCorrelativo" EntitySet="TipoCorrelativo" />
+            <End Role="Correlativo" EntitySet="Correlativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Emergenci__CodEm__7C4F7684" Association="Self.FK__Emergenci__CodEm__7C4F7684">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="Emergencias" EntitySet="Emergencias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__CodCo__6C190EBB" Association="Self.FK__Empleados__CodCo__6C190EBB">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="EmpleadosXCorrelativo" EntitySet="EmpleadosXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pacientes__CodCo__6EF57B66" Association="Self.FK__Pacientes__CodCo__6EF57B66">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="PacientesXCorrelativo" EntitySet="PacientesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UnidadesX__CodCo__619B8048" Association="Self.FK__UnidadesX__CodCo__619B8048">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="UnidadesXCorrelativo" EntitySet="UnidadesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__CodCo__75A278F5" Association="Self.FK__Vehiculos__CodCo__75A278F5">
+            <End Role="Correlativo" EntitySet="Correlativo" />
+            <End Role="VehiculosXCorrelativo" EntitySet="VehiculosXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__CodEm__6D0D32F4" Association="Self.FK__Empleados__CodEm__6D0D32F4">
+            <End Role="Empleados" EntitySet="Empleados" />
+            <End Role="EmpleadosXCorrelativo" EntitySet="EmpleadosXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__Estad__5629CD9C" Association="Self.FK__Empleados__Estad__5629CD9C">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__Gener__5535A963" Association="Self.FK__Empleados__Gener__5535A963">
+            <End Role="Generos" EntitySet="Generos" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__TipoE__571DF1D5" Association="Self.FK__Empleados__TipoE__571DF1D5">
+            <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Hospitale__Estad__4F7CD00D" Association="Self.FK__Hospitale__Estad__4F7CD00D">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="HospitalesSS" EntitySet="HospitalesSS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Unidades__Estado__5EBF139D" Association="Self.FK__Unidades__Estado__5EBF139D">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Unidades" EntitySet="Unidades" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pacientes__Gener__52593CB8" Association="Self.FK__Pacientes__Gener__52593CB8">
+            <End Role="Generos" EntitySet="Generos" />
+            <End Role="Pacientes" EntitySet="Pacientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pacientes__CodHo__70DDC3D8" Association="Self.FK__Pacientes__CodHo__70DDC3D8">
+            <End Role="HospitalesSS" EntitySet="HospitalesSS" />
+            <End Role="PacientesXCorrelativo" EntitySet="PacientesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Emergenci__CodIn__7D439ABD" Association="Self.FK__Emergenci__CodIn__7D439ABD">
+            <End Role="Incidentes" EntitySet="Incidentes" />
+            <End Role="Emergencias" EntitySet="Emergencias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pacientes__CodPa__6FE99F9F" Association="Self.FK__Pacientes__CodPa__6FE99F9F">
+            <End Role="Pacientes" EntitySet="Pacientes" />
+            <End Role="PacientesXCorrelativo" EntitySet="PacientesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Emergenci__TipoL__7E37BEF6" Association="Self.FK__Emergenci__TipoL__7E37BEF6">
+            <End Role="TipoLlamada" EntitySet="TipoLlamada" />
+            <End Role="Emergencias" EntitySet="Emergencias" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UnidadesX__CodUn__628FA481" Association="Self.FK__UnidadesX__CodUn__628FA481">
+            <End Role="Unidades" EntitySet="Unidades" />
+            <End Role="UnidadesXCorrelativo" EntitySet="UnidadesXCorrelativo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__NumPl__76969D2E" Association="Self.FK__Vehiculos__NumPl__76969D2E">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="VehiculosXCorrelativo" EntitySet="VehiculosXCorrelativo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ComandosSalvamentoModelStoreContainer" CdmEntityContainer="ComandosSalvamentoEntities">
+          <EntitySetMapping Name="CategoriaIncidentes">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.CategoriaIncidentes">
+              <MappingFragment StoreEntitySet="CategoriaIncidentes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Correlativo">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Correlativo">
+              <MappingFragment StoreEntitySet="Correlativo">
+                <ScalarProperty Name="Correlativo1" ColumnName="Correlativo" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empleados">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Empleados">
+              <MappingFragment StoreEntitySet="Empleados">
+                <ScalarProperty Name="CodigoEmpleado" ColumnName="CodigoEmpleado" />
+                <ScalarProperty Name="PrimerNombreEmpleado" ColumnName="PrimerNombreEmpleado" />
+                <ScalarProperty Name="SegundoNombreEmpleado" ColumnName="SegundoNombreEmpleado" />
+                <ScalarProperty Name="PrimerApellidoEmpleado" ColumnName="PrimerApellidoEmpleado" />
+                <ScalarProperty Name="SegundoApellidoEmpleado" ColumnName="SegundoApellidoEmpleado" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="TipoEmpleado" ColumnName="TipoEmpleado" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmpleadosXCorrelativo">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.EmpleadosXCorrelativo">
+              <MappingFragment StoreEntitySet="EmpleadosXCorrelativo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CodCorrelativo" ColumnName="CodCorrelativo" />
+                <ScalarProperty Name="CodEmpleado" ColumnName="CodEmpleado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estado">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Estado">
+              <MappingFragment StoreEntitySet="Estado">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Generos">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Generos">
+              <MappingFragment StoreEntitySet="Generos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HospitalesSS">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.HospitalesSS">
+              <MappingFragment StoreEntitySet="HospitalesSS">
+                <ScalarProperty Name="CodigoHospital" ColumnName="CodigoHospital" />
+                <ScalarProperty Name="NombreHospital" ColumnName="NombreHospital" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Incidentes">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Incidentes">
+              <MappingFragment StoreEntitySet="Incidentes">
+                <ScalarProperty Name="CodigoIncidente" ColumnName="CodigoIncidente" />
+                <ScalarProperty Name="TipoIncidente" ColumnName="TipoIncidente" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pacientes">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Pacientes">
+              <MappingFragment StoreEntitySet="Pacientes">
+                <ScalarProperty Name="CodigoPaciente" ColumnName="CodigoPaciente" />
+                <ScalarProperty Name="PrimerNombrePaciente" ColumnName="PrimerNombrePaciente" />
+                <ScalarProperty Name="SegundoNombrePaciente" ColumnName="SegundoNombrePaciente" />
+                <ScalarProperty Name="PrimerApellidoPaciente" ColumnName="PrimerApellidoPaciente" />
+                <ScalarProperty Name="SegundoApellidoPaciente" ColumnName="SegundoApellidoPaciente" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoCorrelativo">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.TipoCorrelativo">
+              <MappingFragment StoreEntitySet="TipoCorrelativo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoEmpleado">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.TipoEmpleado">
+              <MappingFragment StoreEntitySet="TipoEmpleado">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoLlamada">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.TipoLlamada">
+              <MappingFragment StoreEntitySet="TipoLlamada">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TipoLlamada1" ColumnName="TipoLlamada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Unidades">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Unidades">
+              <MappingFragment StoreEntitySet="Unidades">
+                <ScalarProperty Name="CodigoUnidad" ColumnName="CodigoUnidad" />
+                <ScalarProperty Name="Placas" ColumnName="Placas" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnidadesXCorrelativo">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.UnidadesXCorrelativo">
+              <MappingFragment StoreEntitySet="UnidadesXCorrelativo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CodCorrelativo" ColumnName="CodCorrelativo" />
+                <ScalarProperty Name="CodUnidad" ColumnName="CodUnidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vehiculos">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Vehiculos">
+              <MappingFragment StoreEntitySet="Vehiculos">
+                <ScalarProperty Name="NumeroPlaca" ColumnName="NumeroPlaca" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VehiculosXCorrelativo">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.VehiculosXCorrelativo">
+              <MappingFragment StoreEntitySet="VehiculosXCorrelativo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CodCorrelativo" ColumnName="CodCorrelativo" />
+                <ScalarProperty Name="NumPlaca" ColumnName="NumPlaca" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccidentesDeTransito">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.AccidentesDeTransito">
+              <MappingFragment StoreEntitySet="AccidentesDeTransito">
+                <ScalarProperty Name="CodigoAccidente" ColumnName="CodigoAccidente" />
+                <ScalarProperty Name="Lugar" ColumnName="Lugar" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cirugias">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Cirugias">
+              <MappingFragment StoreEntitySet="Cirugias">
+                <ScalarProperty Name="CodigoCirugia" ColumnName="CodigoCirugia" />
+                <ScalarProperty Name="Procedimiento" ColumnName="Procedimiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Emergencias">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.Emergencias">
+              <MappingFragment StoreEntitySet="Emergencias">
+                <ScalarProperty Name="CodEmergencia" ColumnName="CodEmergencia" />
+                <ScalarProperty Name="CodIncidente" ColumnName="CodIncidente" />
+                <ScalarProperty Name="TipoLlamada" ColumnName="TipoLlamada" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="LugarIncidente" ColumnName="LugarIncidente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PacientesXCorrelativo">
+            <EntityTypeMapping TypeName="ComandosSalvamentoModel.PacientesXCorrelativo">
+              <MappingFragment StoreEntitySet="PacientesXCorrelativo">
+                <ScalarProperty Name="CodCorrelativo" ColumnName="CodCorrelativo" />
+                <ScalarProperty Name="CodPaciente" ColumnName="CodPaciente" />
+                <ScalarProperty Name="FrecuenciaCardiaca" ColumnName="FrecuenciaCardiaca" />
+                <ScalarProperty Name="FrecuenciaRespiratoria" ColumnName="FrecuenciaRespiratoria" />
+                <ScalarProperty Name="PresionArterial" ColumnName="PresionArterial" />
+                <ScalarProperty Name="Temperatura" ColumnName="Temperatura" />
+                <ScalarProperty Name="SaturacionOxigeno" ColumnName="SaturacionOxigeno" />
+                <ScalarProperty Name="CodHospital" ColumnName="CodHospital" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="NombreAcompañante" ColumnName="NombreAcompañante" />
+                <ScalarProperty Name="Parentesco" ColumnName="Parentesco" />
+                <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
+                <ScalarProperty Name="HoraLlegada" ColumnName="HoraLlegada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

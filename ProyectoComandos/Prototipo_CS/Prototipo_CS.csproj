@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{905F1E2F-8C13-4C6E-A013-C54B7CA2721A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Prototipo_CS</RootNamespace>
+    <AssemblyName>Prototipo_CS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccidentesDTController.cs" />
+    <Compile Include="Controllers\CategoriaIController.cs" />
+    <Compile Include="Controllers\CirugiaController.cs" />
+    <Compile Include="Controllers\CorrelativoController.cs" />
+    <Compile Include="Controllers\EmergenciasController.cs" />
+    <Compile Include="Controllers\EmpleadosController.cs" />
+    <Compile Include="Controllers\EmXCrrController.cs" />
+    <Compile Include="Controllers\EstadoController.cs" />
+    <Compile Include="Controllers\GenerosController.cs" />
+    <Compile Include="Controllers\HospitalesController.cs" />
+    <Compile Include="Controllers\IncidentesController.cs" />
+    <Compile Include="Controllers\PacientesController.cs" />
+    <Compile Include="Controllers\PacXCrrController.cs" />
+    <Compile Include="Controllers\TipoCrrController.cs" />
+    <Compile Include="Controllers\TipoEmplController.cs" />
+    <Compile Include="Controllers\TipoLLamadaController.cs" />
+    <Compile Include="Controllers\UnidadesController.cs" />
+    <Compile Include="Controllers\UniXCrr.cs" />
+    <Compile Include="Controllers\VehiculosController.cs" />
+    <Compile Include="Controllers\VehXCrr.cs" />
+    <Compile Include="EntityFramework\AccidentesDeTransito.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\CategoriaIncidentes.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Cirugias.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Correlativo.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Emergencias.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Empleados.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\EmpleadosXCorrelativo.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\EntityComandosSalvamento.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityComandosSalvamento.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\EntityComandosSalvamento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\EntityComandosSalvamento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityComandosSalvamento.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Estado.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Generos.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\HospitalesSS.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Incidentes.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Pacientes.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\PacientesXCorrelativo.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\TipoCorrelativo.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\TipoEmpleado.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\TipoLlamada.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Unidades.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\UnidadesXCorrelativo.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Vehiculos.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\VehiculosXCorrelativo.cs">
+      <DependentUpon>EntityComandosSalvamento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Accidentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Accidentes.Designer.cs">
+      <DependentUpon>frm_Accidentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AccsTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AccsTrans.Designer.cs">
+      <DependentUpon>frm_AccsTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ActRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ActRegistros.Designer.cs">
+      <DependentUpon>frm_ActRegistros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Cirugia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Cirugia.Designer.cs">
+      <DependentUpon>frm_Cirugia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_emergencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_emergencias.Designer.cs">
+      <DependentUpon>frm_emergencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Bienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Bienvenido.Designer.cs">
+      <DependentUpon>frm_Bienvenido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CirugiaMenor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CirugiaMenor.Designer.cs">
+      <DependentUpon>frm_CirugiaMenor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Creditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Creditos.Designer.cs">
+      <DependentUpon>frm_Creditos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Datos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Datos.Designer.cs">
+      <DependentUpon>frm_Datos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Empleados.Designer.cs">
+      <DependentUpon>frm_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Fecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Fecha.Designer.cs">
+      <DependentUpon>frm_Fecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Genero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Genero.Designer.cs">
+      <DependentUpon>frm_Genero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_General.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_General.Designer.cs">
+      <DependentUpon>frm_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_usuario.Designer.cs">
+      <DependentUpon>frm_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Unidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Unidades.Designer.cs">
+      <DependentUpon>frm_Unidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paciente.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frm_TipoAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TipoAcc.Designer.cs">
+      <DependentUpon>frm_TipoAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="frm_Accidentes.resx">
+      <DependentUpon>frm_Accidentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AccsTrans.resx">
+      <DependentUpon>frm_AccsTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ActRegistros.resx">
+      <DependentUpon>frm_ActRegistros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Cirugia.resx">
+      <DependentUpon>frm_Cirugia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_emergencias.resx">
+      <DependentUpon>frm_emergencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Bienvenido.resx">
+      <DependentUpon>frm_Bienvenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CirugiaMenor.resx">
+      <DependentUpon>frm_CirugiaMenor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Creditos.resx">
+      <DependentUpon>frm_Creditos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Datos.resx">
+      <DependentUpon>frm_Datos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Empleados.resx">
+      <DependentUpon>frm_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Fecha.resx">
+      <DependentUpon>frm_Fecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Genero.resx">
+      <DependentUpon>frm_Genero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_General.resx">
+      <DependentUpon>frm_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_usuario.resx">
+      <DependentUpon>frm_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Unidades.resx">
+      <DependentUpon>frm_Unidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_TipoAcc.resx">
+      <DependentUpon>frm_TipoAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="EntityFramework\EntityComandosSalvamento.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityComandosSalvamento.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityFramework\EntityComandosSalvamento.edmx.diagram">
+      <DependentUpon>EntityComandosSalvamento.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityFramework\EntityComandosSalvamento.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityComandosSalvamento.Context.cs</LastGenOutput>
+      <DependentUpon>EntityComandosSalvamento.edmx</DependentUpon>
+    </Content>
+    <Content Include="EntityFramework\EntityComandosSalvamento.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityComandosSalvamento.edmx</DependentUpon>
+      <LastGenOutput>EntityComandosSalvamento.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
