@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2BD33ABA-C72C-4390-B82E-F72317DF8C9F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sistema_de_Control_de_Empleados__SCE_</RootNamespace>
+    <AssemblyName>Sistema-de-Control-de-Empleados_%28SCE%29</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cAdministrador.cs" />
+    <Compile Include="cArea.cs" />
+    <Compile Include="cConexion.cs" />
+    <Compile Include="cHorarios.cs" />
+    <Compile Include="cPerfil.cs" />
+    <Compile Include="cPuesto.cs" />
+    <Compile Include="cSolicitud.cs" />
+    <Compile Include="cEmpleado.cs" />
+    <Compile Include="frmAdminsPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminsPrincipal.Designer.cs">
+      <DependentUpon>frmAdminsPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleadosPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleadosPrincipal.Designer.cs">
+      <DependentUpon>frmEmpleadosPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPantallaBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPantallaBienvenida.Designer.cs">
+      <DependentUpon>frmPantallaBienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnAdmActualidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnAdmActualidad.Designer.cs">
+      <DependentUpon>pnAdmActualidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnAdmAdministradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnAdmAdministradores.Designer.cs">
+      <DependentUpon>pnAdmAdministradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnAdmAreaPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnAdmAreaPuesto.Designer.cs">
+      <DependentUpon>pnAdmAreaPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnAdmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnAdmEmpleados.Designer.cs">
+      <DependentUpon>pnAdmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnAdmHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnAdmHorarios.Designer.cs">
+      <DependentUpon>pnAdmHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnAdmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnAdmPerfil.Designer.cs">
+      <DependentUpon>pnAdmPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnAdmSolicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnAdmSolicitudes.Designer.cs">
+      <DependentUpon>pnAdmSolicitudes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnEmpPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnEmpPerfil.Designer.cs">
+      <DependentUpon>pnEmpPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnEmpSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnEmpSolicitud.Designer.cs">
+      <DependentUpon>pnEmpSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pnEmpInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pnEmpInicio.Designer.cs">
+      <DependentUpon>pnEmpInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdminsPrincipal.resx">
+      <DependentUpon>frmAdminsPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleadosPrincipal.resx">
+      <DependentUpon>frmEmpleadosPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPantallaBienvenida.resx">
+      <DependentUpon>frmPantallaBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnAdmActualidad.resx">
+      <DependentUpon>pnAdmActualidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnAdmAdministradores.resx">
+      <DependentUpon>pnAdmAdministradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnAdmAreaPuesto.resx">
+      <DependentUpon>pnAdmAreaPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnAdmEmpleados.resx">
+      <DependentUpon>pnAdmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnAdmHorarios.resx">
+      <DependentUpon>pnAdmHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnAdmPerfil.resx">
+      <DependentUpon>pnAdmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnAdmSolicitudes.resx">
+      <DependentUpon>pnAdmSolicitudes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnEmpPerfil.resx">
+      <DependentUpon>pnEmpPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnEmpSolicitud.resx">
+      <DependentUpon>pnEmpSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnEmpInicio.resx">
+      <DependentUpon>pnEmpInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\less.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\SCP_Logo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\people.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\SCP_Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\UDB_Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

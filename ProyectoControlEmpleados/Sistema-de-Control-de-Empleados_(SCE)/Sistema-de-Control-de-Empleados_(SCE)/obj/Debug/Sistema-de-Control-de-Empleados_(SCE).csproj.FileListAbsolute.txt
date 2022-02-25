@@ -1,0 +1,142 @@
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\close.png
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\less.png
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.ico
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\people.png
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.png
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\UDB_Logo.png
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe.config
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csprojAssemblyReference.cache
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmAdminsPrincipal.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmEmpleadosPrincipal.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmLogin.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmPantallaBienvenida.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmActualidad.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAdministradores.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAreaPuesto.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmEmpleados.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmHorarios.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmPerfil.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmSolicitudes.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpPerfil.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpSolicitud.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpInicio.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.Properties.Resources.resources
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csproj.GenerateResource.cache
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csproj.CoreCompileInputs.cache
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\chito\Alexito\Programación con Estructura de Datos\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\close.png
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\less.png
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.ico
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\people.png
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.png
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\UDB_Logo.png
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe.config
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csprojAssemblyReference.cache
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmAdminsPrincipal.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmEmpleadosPrincipal.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmLogin.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmPantallaBienvenida.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmActualidad.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAdministradores.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAreaPuesto.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmEmpleados.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmHorarios.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmPerfil.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmSolicitudes.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpPerfil.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpSolicitud.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpInicio.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.Properties.Resources.resources
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csproj.GenerateResource.cache
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\byron\Desktop\Sistema Control de Empleados\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\close.png
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\less.png
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.ico
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\people.png
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.png
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\UDB_Logo.png
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe.config
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csprojAssemblyReference.cache
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmAdminsPrincipal.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmEmpleadosPrincipal.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmLogin.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmPantallaBienvenida.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmActualidad.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAdministradores.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAreaPuesto.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmEmpleados.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmHorarios.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmPerfil.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmSolicitudes.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpPerfil.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpSolicitud.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpInicio.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.Properties.Resources.resources
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csproj.GenerateResource.cache
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csproj.CoreCompileInputs.cache
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\Gissela\Desktop\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\close.png
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\less.png
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.ico
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\people.png
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.png
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\UDB_Logo.png
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe.config
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csprojAssemblyReference.cache
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmAdminsPrincipal.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmEmpleadosPrincipal.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmLogin.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmPantallaBienvenida.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmActualidad.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAdministradores.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAreaPuesto.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmEmpleados.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmHorarios.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmPerfil.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmSolicitudes.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpPerfil.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpSolicitud.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpInicio.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.Properties.Resources.resources
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csproj.GenerateResource.cache
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\Tote Portal\Documents\GitHub\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\close.png
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\less.png
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.ico
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\people.png
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\SCP_Logo.png
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Imagenes\UDB_Logo.png
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe.config
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\bin\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csprojAssemblyReference.cache
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmAdminsPrincipal.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmEmpleadosPrincipal.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmLogin.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.frmPantallaBienvenida.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmActualidad.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAdministradores.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmAreaPuesto.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmEmpleados.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmHorarios.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmPerfil.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnAdmSolicitudes.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpPerfil.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpSolicitud.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.pnEmpInicio.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema_de_Control_de_Empleados__SCE_.Properties.Resources.resources
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).csproj.GenerateResource.cache
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).exe
+C:\Users\alexi\Desktop\Proyecto-PED\sce_udb\Sistema-de-Control-de-Empleados_(SCE)\Sistema-de-Control-de-Empleados_(SCE)\obj\Debug\Sistema-de-Control-de-Empleados_(SCE).pdb
